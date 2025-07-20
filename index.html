@@ -1,0 +1,81 @@
+ 
+<html>
+<head>
+    
+    <style>
+        body {
+           
+            background: linear-gradient(to right, #00c6ff, lightblue);
+           
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: white;
+            padding: 30px;
+            margin: 100px auto;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 0px 15px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: blue;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .emoji {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2><span class="emoji">🌡️</span> Fahrenheit to <br> Celsius</h2>
+        <input type="number" id="t1" placeholder="Enter °F" />
+        <br>
+        <button onclick="convertTemp()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convertTemp() {
+             var f = t1.value;
+                f= parseFloat(f);
+                var c=(f-32)*5/9;
+                result.innerHTML=c;
+        }
+    </script>
+
+</body>
+</html>
